@@ -19,7 +19,7 @@ describe('User', function(){
   beforeEach(function(done){
 
     cp.execFile(__dirname + '/../scripts/clean-db.sh', [db], {cwd:__dirname + '/../scripts'}, function(err, stdout, stderr){
-      console.log(err, stdout, stderr);
+      //console.log(err, stdout, stderr);
       done();
     });
   });
@@ -49,7 +49,7 @@ describe('User', function(){
   describe('.login', function(){
     it('login a user', function(done){
       User.login({username:'bob', password:'123'},function(user){
-        console.log(user);
+        //console.log(user);
         expect(user.username).to.equal('bob');
         done();
       });
