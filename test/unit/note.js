@@ -10,8 +10,8 @@ Lab       = require('lab'),
 lab       = exports.lab = Lab.script(),
 describe  = lab.describe,
 it        = lab.it,
-//before    = lab.before,
 db        = h.getdb(),
+fs         = require('fs'),
 beforeEach= lab.beforeEach;
 
 describe('Note', function(){
@@ -29,6 +29,24 @@ describe('Note', function(){
       var n = new Note();
       expect(n).to.be.instanceof(Note);
       done();
+    });
+  });
+  describe('.upload', function(){
+    it('should upload an image', function(done){
+      var file = fs.createReadStream(__dirname + '/../fixtures/flag.png');
+      Note.upload({token:'tok'}, file, 'flag.png', noteId, function(err, results){
+        expect(err).to.be.null;
+        done();
+      });
+    });
+  });
+
+  describe('.uploadmobile', function(){
+    it('should upload a b64 encoded image', function(done){
+      Note.uploadmobile({token:'tok'}, 'b64image', noteId, function(err, results){
+        expect(err).to.be.null;
+        done();
+      });
     });
   });
   describe('.create', function(){
