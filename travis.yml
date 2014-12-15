@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "0.10"
+services:
+  - postgresql
+addons:
+  postgresql: "9.3"
+notifications:
+  email: false
+script:
+  - psql -c 'create batabase evernode_test;' -U postgres
+  - cd test/scripts; ./create-db.sh evernoded_test; cd ../..;
+after_script:
+  - npm run coveralls
+env:
+  global:
+    - DATABASE_URL=postgres://postgres@localhost/evernode_test
+    - AWS_BUCKET=sj-evernode-test
+    - AWS_ACCESS_KEY_ID=
+    - AWS_SECRET_ACCESS_KEY=
