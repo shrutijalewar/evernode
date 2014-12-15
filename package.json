@@ -15,9 +15,9 @@
   "scripts": {
     "start": "node server/index.js",
     "postinstall": "grunt deploy",
-    "syntax":"grunt build",
+    "syntax": "grunt build",
     "test": "make test",
-    "coveralls":"mocha test --recursive -r blanket -R mocha-lcov-reporter | coveralls"
+    "coveralls":"make test-cov  | coveralls"
   },
   "author": "Chyld Medford <chyld.medford@gmail.com>",
   "license": "MIT",
