@@ -40,7 +40,7 @@ describe('User', function(){
       });
     });
     it('should NOT register a new User - duplicate', function(done){
-      User.register({username:'sam', password:'123', avatar:'http://images.apple.com/global/elements/flags/16x16/usa_2x.png'}, function(err){
+      User.register({username:'bob', password:'123', avatar:'http://images.apple.com/global/elements/flags/16x16/usa_2x.png'}, function(err){
         expect(err).to.be.ok;
         done();
       });
