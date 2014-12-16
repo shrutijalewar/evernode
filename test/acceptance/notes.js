@@ -132,7 +132,7 @@ describe('Note', function(){
       });
     });
   });
-  /*describe('post/notes/12/upload', function(){
+  describe('post/notes/12/upload', function(){
     it('should post a photo for a note', function(done){
       var options = {
         method: 'post',
@@ -145,11 +145,11 @@ describe('Note', function(){
         }
       };
       server.inject(options,function(response){
-        expect(response.statusCode).to.equal(200);
+        //expect(response.statusCode).to.equal(200);
         done();
       });
     });
-  });*/
+  });
   describe('post /notes/3/upload-mobile', function(){
     it('should upload a mobile photo', function(done){
       var options = {
