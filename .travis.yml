@@ -8,6 +8,9 @@ addons:
 notifications:
   email: false
 script:
+  - npm run syntax
+  - npm test  
+before_script:
   - psql -c 'create database evernode_test;' -U postgres
   - cd test/scripts; ./create-db.sh evernode_test; cd ../..;
 after_script:
