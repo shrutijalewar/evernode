@@ -29,7 +29,7 @@ describe('User', function(){
       };
       server.inject(options,function(response){
         cookie = response.headers['set-cookie'][0].match(/hapi-cookie=[^;]+/)[0];
-        console.log(cookie);
+        //console.log(cookie);
         done();
       });
     });
