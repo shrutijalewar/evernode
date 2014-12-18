@@ -1,20 +1,21 @@
-var config = {};
+var config;
 
-  config.seleniumAddress = 'http://localhost:4444/wd/hub';
-  config.multiCapabilities = [
-  {
-    'browserName': 'firefox'
-  }
-];
+if(process.env.TRAVIS_JOB_NUMBER){
+  config = require('./protractor-sauce.conf');
+}else{
+  config = require('./protractor-local.conf');
+}
 
 config.suites = {
-  homepage: 'test/e2e/homepage/**/*.spec.js'
+  homepage: 'test/e2e/homepage/**/*.spec.js',
+  authentication: 'test/e2e/authentication/**/*.spec.js',
+  notes: 'test/e2e/notes/**/*.spec.js'
 };
 
 config.jasmineNodeOpts = {
   isVerbose: true,
   showColors: true,
-  defaultTimeOutInterval: 3000
+  defaultTimeoutInterval: 30000
 };
 
 config.baseUrl = 'http://localhost:5555';
