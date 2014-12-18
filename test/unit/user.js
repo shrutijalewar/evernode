@@ -32,13 +32,13 @@ describe('User', function(){
       done();
     });
   });
-  describe('.register', function(){
+  /*describe('.register', function(){
     it('register a new user', function(done){
       User.register({username:'sam', password:'1234', avatar:'http://images.apple.com/global/elements/flags/16x16/usa_2x.png'}, function(err){
         expect(err).to.be.null;
         done();
       });
-    });
+    });*/
     it('should NOT register a new User - duplicate', function(done){
       User.register({username:'bob', password:'123', avatar:'http://images.apple.com/global/elements/flags/16x16/usa_2x.png'}, function(err){
         expect(err).to.be.ok;
@@ -69,4 +69,4 @@ describe('User', function(){
   });
 
 
-});// last
+//}); last

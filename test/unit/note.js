@@ -11,7 +11,7 @@ lab       = exports.lab = Lab.script(),
 describe  = lab.describe,
 it        = lab.it,
 db        = h.getdb(),
-fs         = require('fs'),
+//fs         = require('fs'),
 beforeEach= lab.beforeEach;
 
 describe('Note', function(){
