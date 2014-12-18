@@ -150,7 +150,7 @@ describe('Note', function(){
       });
     });
   });
-  /*describe('post /notes/3/upload-mobile', function(){
+  describe('post /notes/3/upload-mobile', function(){
     it('should upload a mobile photo', function(done){
       var options = {
         method: 'post',
@@ -168,5 +168,5 @@ describe('Note', function(){
         done();
       });
     });
-  });*/
+  });
 });// last
