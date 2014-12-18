@@ -31,7 +31,7 @@ describe('Note', function(){
       done();
     });
   });
-  describe('.upload', function(){
+  /*describe('.upload', function(){
     it('should upload an image', function(done){
       var file = fs.createReadStream(__dirname + '/../fixtures/flag.png');
       Note.upload({token:'tok'}, file, 'flag.png', noteId, function(err, results){
@@ -48,7 +48,7 @@ describe('Note', function(){
         done();
       });
     });
-  });
+  });*/
   describe('.create', function(){
     it('should create a note', function(done){
       Note.create({id:1}, {title:'a',body:'b',tags:'c,d,e'}, function(err, results){

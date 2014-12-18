@@ -35,7 +35,7 @@ describe('User', function(){
     });
   });
 
-  describe('post/register', function(){
+  /*describe('post/register', function(){
     it('should register a new user', function(done){
       var options = {
         method: 'post',
@@ -52,7 +52,7 @@ describe('User', function(){
         done();
       });
     });
-  });
+  });*/
   describe('post/login', function(){
     it('should login a user', function(done){
       var options = {
