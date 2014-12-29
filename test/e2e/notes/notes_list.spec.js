@@ -1,16 +1,18 @@
 'use strict';
 
-var cp    = require('child_process'),
-h         = require('../../helpers/helpers'),
-path      = require('path'),
-db        = h.getdb();
+var //cp    = require('child_process'),
+//h         = require('../../helpers/helpers'),
+path      = require('path');
+//db        = h.getdb();
 
 describe('notes list', function(){
-  beforeEach(function(done){
-    cp.execFile(__dirname + '/../../scripts/clean-db.sh', [db], {cwd:__dirname + '/../../scripts'}, function(err, stdout, stderr){
-      login();
-      done();
-    });
+  //beforeEach(function(done){
+    //cp.execFile(__dirname + '/../../scripts/clean-db.sh', [db], {cwd:__dirname + '/../../scripts'}, function(err, stdout, stderr){
+      //login();
+      //done();
+    //});
+  beforeEach(function(){
+    login();
   });
 
   it('should get notes page', function(){

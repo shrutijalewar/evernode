@@ -1,15 +1,17 @@
 'use strict';
 
-var cp        = require('child_process'),
-h         = require('../../helpers/helpers'),
-db        = h.getdb();
+var //cp        = require('child_process'),
+h         = require('../../helpers/helpers');
+//db        = h.getdb();
 
 describe('register', function(){
-  beforeEach(function(done){
-    cp.execFile(__dirname + '/../../scripts/clean-db.sh', [db], {cwd:__dirname + '/../../scripts'}, function(err, stdout, stderr){
+  //beforeEach(function(done){
+    //cp.execFile(__dirname + '/../../scripts/clean-db.sh', [db], {cwd:__dirname + '/../../scripts'}, function(err, stdout, stderr){
+      //browser.get('/#/register');
+      //done();
+    //});
+    beforeEach(function(){
       browser.get('/#/register');
-      done();
-    });
   });
 
   it('should get regiser page', function(){
